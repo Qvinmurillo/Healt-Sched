@@ -38,6 +38,8 @@ yarn android
 
 Crea un archivo `.env` en la raíz del proyecto con tus credenciales de Supabase:
 
+Supabase documentacion [Supabase](https://supabase.com/docs) 
+
 ```bash
 EXPO_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key_aqui
