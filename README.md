@@ -36,9 +36,7 @@ yarn android
 
 ## 🔑 Variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto con tus credenciales de Supabase:
-
- Supabase <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=github supabase&perline=10" /></a> documentacion [Supabase](https://supabase.com/docs) 
+Crea un archivo `.env` en la raíz del proyecto con tus credenciales de Supabase: [`Supabase-documentation`](https://supabase.com/docs) 
 
 ```bash
 EXPO_PUBLIC_SUPABASE_URL=https://tu-proyecto.supabase.co
