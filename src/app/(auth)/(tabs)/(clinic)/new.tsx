@@ -1,10 +1,12 @@
 import DateTimePicker from "@/src/components/DateTimePicker";
 import Dropdown from "@/src/components/ui/CustomDropDown";
+import ButtonCita from "@/src/components/ui/GenericButton";
+import TextField from "@/src/components/ui/TextField";
 import { useAppointments } from "@/src/hooks/useMedicalAppointment";
 import { Appointment } from "@/src/types/medicalappointments";
 import { router } from "expo-router";
 import { useState } from "react";
-import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, StyleSheet, Text, View } from "react-native";
 import 'react-native-get-random-values';
 import { v4 as uuid } from "uuid";
 
@@ -85,50 +87,46 @@ return (
 
     </View>
     <Text style={styles.name}>Nombre del Doctor (opcional)</Text>
-    <TextInput
-      placeholder="Dr. / Dra."
-      value={doctor}
-      onChangeText={setDoctor}
-      style={styles.input}
+    <TextField 
+    holder="Ingrese el nombre del doctor" 
+    value={doctor} 
+    onChangeText={setDoctor}
     />
 
     <Text style={styles.name}>Fecha y hora</Text>
-    <DateTimePicker value={date ?? new Date()} onChange={setDate} mode="datetime" />
+    <DateTimePicker 
+    value={date ?? new Date()} 
+    onChange={setDate} 
+    mode="datetime" />
 
     <Text style={{ color: "#6b7280" }}>
       {date ? date.toISOString() : "Sin fecha seleccionada"}
     </Text>
 
     <Text style={styles.name}>Describa su problema (opcional)</Text>
-    <TextInput
-      placeholder="Motivo, indicaciones..."
-      value={notes}
-      onChangeText={setNotes}
-      style={[styles.input, { height: 60 }]}
-      multiline
+    <TextField 
+    holder="Describa su problema"
+    value={notes}
+    onChangeText={setNotes}
+    style={{height: 60}}
+    multiline
     />
 
-    <Button title="Agendar" onPress={onSave} />
+    <ButtonCita title="Agendar" onPress={onSave} />
   </View>
 );
 
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 12 },
-  name: { fontSize: 12, color: "#6b7280" },
-  input: {
-    backgroundColor: "#fff",
-    padding: 12,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#e5e7eb",
+  container:{ 
+    padding: 16, 
+    gap: 12 
   },
-  pill: {
-    borderWidth: 1, borderColor: "#e5e7eb", borderRadius: 999,
-    paddingVertical: 6, paddingHorizontal: 10, color: "#374151",
+  name:{ 
+    fontSize: 12, 
+    color: "#6b7280" 
   },
-  pillActive: { backgroundColor: "#111827", color: "white", borderColor: "#111827" },
 
 
 });

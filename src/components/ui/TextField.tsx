@@ -6,10 +6,18 @@ interface Props extends TextInputProps {
     onChangeText: (text: string) => void;
 }
 
-export default function TextFiel({holder, value, onChangeText, secureTextEntry, keyboardType}: Props){
+export default function TextFiel({holder, value, onChangeText, secureTextEntry, keyboardType, ...rest}: Props){
     return(
         <>
-        <TextInput style={styles.textInput} placeholder={holder} value={value} onChangeText={onChangeText} secureTextEntry={secureTextEntry} keyboardType={keyboardType}/>
+        <TextInput 
+        style={styles.textInput} 
+        placeholder={holder} 
+        value={value} 
+        onChangeText={onChangeText} 
+        secureTextEntry={secureTextEntry} 
+        keyboardType={keyboardType}
+        {...rest}
+        />
         </>
 )}
 
@@ -20,5 +28,7 @@ const styles = StyleSheet.create({
         borderColor: "rgba(0, 0, 0, 0.05)",
         paddingHorizontal: 14,
         fontSize: 12,
+        textAlignVertical: "top", 
+        paddingVertical: 10,
     },
 })

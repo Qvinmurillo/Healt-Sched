@@ -53,14 +53,59 @@ export default function FiledDetailScreen(){
 }
 
 const styles = StyleSheet.create({
-  card: { backgroundColor: "#fff", padding: 16, borderRadius: 12, elevation: 2, borderWidth: 1, borderColor: "#eee" },
-  title: { fontSize: 18, fontWeight: "700" },
-  meta: { color: "#6b7280", fontSize: 12, marginTop: 4 },
-  label: { fontSize: 12, color: "#6b7280" },
-  value: { fontSize: 14, fontWeight: "600", color: "#111827" },
+  card:{ 
+    backgroundColor: "#fff", 
+    padding: 16, 
+    borderRadius: 12, 
+    elevation: 2, 
+    borderWidth: 1, 
+    borderColor: "#eee" 
+  },
+  title:{ 
+    fontSize: 18, 
+    fontWeight: "700" 
+  },
+  meta:{ 
+    color: "#6b7280", 
+    fontSize: 12, 
+    marginTop: 4 
+  },
+  label: { 
+    fontSize: 12, 
+    color: "#6b7280" 
+  },
+  value: { 
+    fontSize: 14, 
+    fontWeight: "600", 
+    color: "#111827" 
+  },
 
-  btn: { backgroundColor: "#111827", padding: 12, borderRadius: 10, alignItems: "center" },
-  modalBg: { flex: 1, backgroundColor: "rgba(0,0,0,0.8)", justifyContent: "center", alignItems: "center", padding: 16 },
-  img: { width: "100%", height: "70%", resizeMode: "contain", borderRadius: 12, backgroundColor: "#000" },
-  closeBtn: { marginTop: 16, backgroundColor: "#ef4444", padding: 10, borderRadius: 8, alignItems: "center", minWidth: 120 },
+  btn:{ 
+    backgroundColor: "#417584", 
+    padding: 12, 
+    borderRadius: 10, 
+    alignItems: "center" 
+  },
+  modalBg:{ 
+    flex: 1, 
+    backgroundColor: "rgba(0,0,0,0.8)", 
+    justifyContent: "center", 
+    alignItems: "center", 
+    padding: 16 
+  },
+  img:{ 
+    width: "100%", 
+    height: "70%", 
+    resizeMode: "contain", 
+    borderRadius: 12, 
+    backgroundColor: "#000" 
+  },
+  closeBtn:{ 
+    marginTop: 16, 
+    backgroundColor: "#ef4444", 
+    padding: 10, 
+    borderRadius: 8, 
+    alignItems: "center", 
+    minWidth: 120 
+  },
 });

@@ -35,7 +35,7 @@ export default function DateTimePicker({
       is24Hour: true,
       onChange: (_, selected?: Date) => {
         if (!selected) return;
-        onChange(selected); // ← IMPORTANTE
+        onChange(selected);
       },
     });
 
@@ -48,10 +48,22 @@ export default function DateTimePicker({
   const t = new Intl.DateTimeFormat("es-CO", { hour: "2-digit", minute: "2-digit" }).format(value);
 
   return (
-    <HStack p={10} style={styles.row}>
-      <Text>{mode === "datetime" ? `${d} ${t}` : mode === "time" ? t : d}</Text>
-      <Button variant="outlined" onPress={handlePress}>Seleccionar</Button>
+    <HStack p={1} style={styles.row}>
+      <Text>
+        {mode === "datetime" ? `${d} ${t}` : mode === "time" ? t : d}
+      </Text>
+
+      <Button 
+      variant="outlined" 
+      onPress={handlePress}>Seleccionar
+      </Button>
     </HStack>
   );
 }
-const styles = StyleSheet.create({ row: { alignItems: "center", justifyContent: "space-between" } });
+const styles = StyleSheet.create({ 
+  row:{ 
+    alignItems: "center", 
+    justifyContent: "space-between",
+  },
+
+});

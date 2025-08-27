@@ -29,11 +29,13 @@ export default function MedicalDetails() {
 
         <View style={{ height: 10 }} />
         <Text style={styles.label}>Especialista</Text>
-        <Text style={styles.value}>{item.specialty}</Text>
+        <Text style={styles.value}>{item.Especialists}</Text>
 
         <View style={{ height: 8 }} />
         <Text style={styles.label}>Fecha</Text>
-        <Text style={styles.value}>{formatDate(item.dateISO)}</Text>
+        <Text style={styles.value}>
+          {formatDate(item.dateISO)}
+        </Text>
 
         {!!item.doctor && (
           <>
@@ -63,7 +65,17 @@ const styles = StyleSheet.create({
     elevation: 2,
     borderWidth: 1, borderColor: "#eee",
   },
-  title: { fontSize: 18, fontWeight: "700" },
-  label: { fontSize: 12, color: "#6b7280" },
-  value: { fontSize: 14, fontWeight: "600", color: "#111827" },
+  title:{ 
+    fontSize: 18, 
+    fontWeight: "700" 
+  },
+  label:{ 
+    fontSize: 12, 
+    color: "#6b7280" 
+  },
+  value:{ 
+    fontSize: 14, 
+    fontWeight: "600", 
+    color: "#111827" 
+  },
 });

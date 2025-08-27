@@ -1,10 +1,11 @@
+import ImageButton from "@/src/components/ui/GenericButton";
 import { useRegistered } from "@/src/hooks/useMedicalRegistered";
 import { Registered } from "@/src/types/medicalregistered";
 import { generateRequestNumber } from "@/src/utils/storage/registered";
 import * as ImagePicker from "expo-image-picker";
 import { router } from "expo-router";
 import { useState } from "react";
-import { Alert, Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, TextInput, View } from "react-native";
 import "react-native-get-random-values";
 import { v4 as uuid } from "uuid";
 
@@ -51,18 +52,38 @@ const { add } = useRegistered();
         multiline
       />
 
-      <Button title="Tomar foto" onPress={pickImage} />
-      {imageUri && <Image source={{ uri: imageUri }} style={styles.preview} />}
+    <ImageButton title="Tomar Foto" onPress={pickImage}/>
 
-      <Button title="Guardar" onPress={onSave} />
-      {!imageUri && <Text style={{ color: "#6b7280" }}>Adjunte su radicado.</Text>}
+    <ImageButton title="Guardar Imagen" onPress={onSave} />
+    {!imageUri && <Text style={{ color: "#6b7280" }}>Adjunte su radicado.</Text>}
+
+    {imageUri && <Image source={{uri: imageUri}} style={styles.preview} />}
+
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 16, gap: 12 },
-  label: { fontSize: 12, color: "#6b7280" },
-  input: { backgroundColor: "#fff", padding: 12, borderRadius: 10, borderWidth: 1, borderColor: "#e5e7eb" },
-  preview: { width: "100%", height: 220, marginTop: 12, borderRadius: 10, backgroundColor: "#f3f4f6" },
+  container:{ 
+    padding: 16, 
+    gap: 12 
+  },
+  label:{ 
+    fontSize: 12, 
+    color: "#6b7280" 
+  },
+  input:{ 
+    backgroundColor: "#fff", 
+    padding: 12, 
+    borderRadius: 10, 
+    borderWidth: 1, 
+    borderColor: "#e5e7eb" 
+  },
+  preview:{ 
+    width: "100%", 
+    height: 220, 
+    marginTop: 12, 
+    borderRadius: 10, 
+    backgroundColor: "#f3f4f6" 
+  },
 });

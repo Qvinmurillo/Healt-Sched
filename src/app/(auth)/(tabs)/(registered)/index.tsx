@@ -46,9 +46,33 @@ export default function RegisteredScreen(){
 }
 
 const styles = StyleSheet.create({
-  card: { flexDirection: "row", backgroundColor: "#fff", padding: 12, borderRadius: 12, marginBottom: 12, elevation: 2, borderWidth: 1, borderColor: "#eee" },
-  thumb: { width: 60, height: 60, borderRadius: 8, backgroundColor: "#f3f4f6" },
-  title: { fontWeight: "700", fontSize: 16 },
-  meta: { color: "#6b7280", fontSize: 12 },
-  desc: { color: "#374151", fontSize: 12, marginTop: 4 },
+  card:{ 
+    flexDirection: "row", 
+    backgroundColor: "#fff", 
+    padding: 12, 
+    borderRadius: 12, 
+    marginBottom: 12, 
+    elevation: 2, 
+    borderWidth: 1, 
+    borderColor: "#eee" 
+  },
+  thumb:{ 
+    width: 60, 
+    height: 60, 
+    borderRadius: 8, 
+    backgroundColor: "#f3f4f6" 
+  },
+  title:{ 
+    fontWeight: "700", 
+    fontSize: 16 
+  },
+  meta:{ 
+    color: "#6b7280", 
+    fontSize: 12 
+  },
+  desc: { 
+    color: "#374151", 
+    fontSize: 12, 
+    marginTop: 4 
+  },
 });

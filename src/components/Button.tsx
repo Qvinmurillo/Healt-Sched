@@ -38,7 +38,7 @@ const styles = {
     button: {
       padding: 14,
       borderRadius: 50,
-      backgroundColor: 'black',
+      backgroundColor: 'green',
     },
     text: {
       textAlign: 'center',
