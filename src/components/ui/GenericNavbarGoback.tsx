@@ -3,71 +3,78 @@ import { Image } from "expo-image";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
+export const NAVBAR_HEIGHT = 96; // 40 (status+padding) + 40 (fila) + 16 (espacio título)
+
 type GenericNavbarProps = {
   title: string;
-  iconName: IconSymbolName;
+  iconName?: IconSymbolName;
   onPress?: () => void;
   bannerImage?: any;
 };
 
 export default function GenericNavbar({
   title,
-  iconName,
+  iconName = "arrow.left",
   onPress,
-  bannerImage = require('@/assets/images/Banner-Navbar.png'),
+  bannerImage = require("@/assets/images/Banner-Navbar.png"),
 }: GenericNavbarProps) {
   return (
-    <>
     <View style={styles.navbarContainer}>
-  {/* Línea superior: icono y banner */}
-        <View style={styles.topRow}>
-            <TouchableOpacity onPress={onPress}>
-                <IconSymbol name={iconName} color="#fff" size={24} />
-            </TouchableOpacity>
-            <View style={styles.bannerContainer}>
-            <Image source={bannerImage || null } style={styles.banner} contentFit="contain" />
-            </View>
-        </View>
+      {/* fila superior: flecha + banner */}
+      <View style={styles.topRow}>
+        <TouchableOpacity onPress={onPress} style={styles.left} hitSlop={10}>
+          {iconName && <IconSymbol name={iconName} color="#fff" size={24} />}
+        </TouchableOpacity>
 
-  {/* Línea inferior: título centrado */}
-        <Text style={styles.title}>{title}</Text>
+        <View style={styles.right}>
+          {bannerImage && (
+            <Image source={bannerImage} style={styles.banner} contentFit="contain" />
+          )}
+        </View>
+      </View>
+
+      {/* fila inferior: título centrado */}
+      <Text style={styles.title}>{title}</Text>
     </View>
-    </>
   );
 }
 
 const styles = StyleSheet.create({
-    navbarContainer: {
-    position: 'absolute',
+  navbarContainer: {
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
-    paddingTop: 40,
-    paddingHorizontal: 16,
-    backgroundColor: '#417584',
+    paddingTop: 40, // notch/status bar
+    backgroundColor: "#417584",
+    zIndex: 1000,   // 🔑 asegura que quede encima
+    elevation: 4,   // Android shadow
   },
   topRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 16
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    height: 40,
   },
-  bannerContainer:{
-    width: 150,
-    justifyContent: 'center',
-    alignItems: 'flex-end'
+  left: {
+    width: 40,
+    alignItems: "flex-start",
+    justifyContent: "center",
+  },
+  right: {
+    width: 120,
+    alignItems: "flex-end",
+    justifyContent: "center",
   },
   banner: {
-    width: '100%',
-    height: '100%',
-    flex: 1
+    width: "100%",
+    height: 30,
   },
   title: {
     marginTop: 6,
-    textAlign: 'center',
-    fontSize: 14,
-    color: '#fff',
-    fontWeight: 'bold'
+    textAlign: "center",
+    fontSize: 16,
+    color: "#fff",
   },
 });
-

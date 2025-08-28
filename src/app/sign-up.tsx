@@ -180,13 +180,13 @@ const [loading, setLoading] = useState(false);
 
       },
       text1:{
-        paddingTop: 80,
+        paddingTop: 90,
         fontSize: 12
       },
       text2:{
         fontSize: 12
       },
       btnSent:{
-
-      },
+        padding: 40
+      }
     });

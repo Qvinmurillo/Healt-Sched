@@ -103,7 +103,7 @@ const SignIn = () => {
                   <LabelField label="CONTRASEÑA*" />
                   <TextFiel holder="Ingresa una contraseña" value={password} onChangeText={setPassword} secureTextEntry={true}/>
 
-                  <View>
+                  <View style={styles.btnSent}>
                     <ButtonRegister title={loading ? "Ingresando..." : "INICIA SESIÓN"} onPress={handleSubmit} />
                   </View>
                 </Container>
@@ -123,6 +123,9 @@ screen:{
 scrollContainer:{
   paddingTop: 100
 },
+btnSent:{
+  padding: 40
+}
 })
 
 export default SignIn;

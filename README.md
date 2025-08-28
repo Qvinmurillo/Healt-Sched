@@ -2,6 +2,9 @@
 
 Aplicación móvil construida con **React Native Expo + Supabase** para la gestión de **Citas médicas**.  
 
+<img src="https://imgur.com/Fg32MNl" width="300">
+<img src="https://imgur.com/a/4CvOjIi" width="300">
+
 ## ✨ Características
 
 - 📋 Registro e inicio de sesión con Supabase (Auth).  
