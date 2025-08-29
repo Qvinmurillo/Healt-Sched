@@ -3,8 +3,8 @@
 Aplicación móvil construida con **React Native Expo + Supabase** para la gestión de **Citas médicas**.  
 
 <p align="center">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmF4ZWN1Z2hia242bGxtOGxpa2NpaTBweTNhdGtsbnpmOGZqaXRhZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rdPA10GJ7Hh35d5DuQ/giphy.gif" width="200">
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjNiMzNrNnZ0Yjc1b2FrM2EzenU4cHBrdThraWNpeTVyOHI1dTR3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hWeNKjNbO765Swy9SP/giphy.gif" width="200">
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmIzdzRoa2lpZnBqZHl3OW1oMmdoZ3NibTBhdG9zMW94Y3Y0aG8xNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WL6gYh5txUx8wNNwYr/giphy.gif" width="200">
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmYzNDVkamJ4OTcxZTltZ2dhbzc4ZjNlanI0eGF4aXQzOThpb2J5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gXc7a00Jvy1qC8dQLs/giphy.gif" width="200">
 </p>
 ## ✨ Características
 
